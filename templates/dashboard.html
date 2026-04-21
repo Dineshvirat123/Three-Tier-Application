@@ -1,22 +1,64 @@
-<h2>Welcome {{user}} 👋</h2>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+
+  <!-- ✅ ADD CSS HERE -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
 
 <marquee>🚀 DevOps Portfolio App | AWS • Kubernetes • CI/CD</marquee>
 
-<p>Version: {{version}} | Region: {{region}} | Instance: {{instance}}</p>
+<div class="container">
 
-<hr>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>Dinesh App</h2>
+    <a href="/dashboard">Dashboard</a>
+    <a href="/projects">Projects</a>
+    <a href="/blogs">Blogs</a>
+    <a href="/ideas">Ideas</a>
+    <a href="/logout">Logout</a>
+  </div>
 
-<h3>Stats</h3>
-Projects: {{projects}} |
-Blogs: {{blogs}} |
-Deployments: {{deployments}} |
-Ideas: {{ideas}}
+  <!-- Main Content -->
+  <div class="main">
 
-<hr>
+    <div class="header">
+      <h2>Welcome {{user}} 👋</h2>
+    </div>
 
-<h3>Add Project</h3>
-<form action="/add_project" method="post">
-  Title: <input name="title"><br>
-  Desc: <input name="description"><br>
-  <button>Add</button>
-</form>
+    <!-- DevOps Info -->
+    <div class="info-box">
+      Version: {{version}} | Region: {{region}} | Instance: {{instance}}
+    </div>
+
+    <hr>
+
+    <!-- Stats -->
+    <h3>Stats</h3>
+    <div class="cards">
+      <div class="card">Projects<br>{{projects}}</div>
+      <div class="card">Blogs<br>{{blogs}}</div>
+      <div class="card">Deployments<br>{{deployments}}</div>
+      <div class="card">Ideas<br>{{ideas}}</div>
+    </div>
+
+    <hr>
+
+    <!-- Add Project -->
+    <h3>Add Project</h3>
+    <form action="/add_project" method="post">
+      Title: <input name="title"><br><br>
+      Desc: <input name="description"><br><br>
+      <button type="submit">Add</button>
+    </form>
+
+  </div>
+
+</div>
+
+</body>
+</html>
