@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blogs</title>
+</head>
+<body>
+
+<h2>📝 Blogs</h2>
+
+<!-- Add Blog -->
+<form action="/blogs" method="post">
+  <input type="text" name="title" placeholder="Blog Title" required><br><br>
+  <textarea name="content" placeholder="Write your blog..." required></textarea><br><br>
+  <button type="submit">Publish</button>
+</form>
+
+<hr>
+
+<!-- Blog List -->
+<h3>All Blogs</h3>
+
+{% for b in blogs %}
+  <div style="border:1px solid black; padding:10px; margin:10px;">
+    <b>{{b[1]}}</b>
+    <p>{{b[2]}}</p>
+  </div>
+{% endfor %}
+
+<br>
+<a href="/dashboard">⬅ Back to Dashboard</a>
+
+</body>
+</html>
