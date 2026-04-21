@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ideas</title>
+</head>
+<body>
+
+<h2>💡 New Ideas</h2>
+
+<!-- Add Idea -->
+<form action="/ideas" method="post">
+  <input type="text" name="idea" placeholder="Enter your idea..." required><br><br>
+  <button type="submit">Add Idea</button>
+</form>
+
+<hr>
+
+<!-- Ideas List -->
+<h3>Ideas List</h3>
+
+{% for i in ideas %}
+  <div style="border:1px solid black; padding:10px; margin:10px;">
+    <p>{{i[1]}}</p>
+  </div>
+{% endfor %}
+
+<br>
+<a href="/dashboard">⬅ Back to Dashboard</a>
+
+</body>
+</html>
