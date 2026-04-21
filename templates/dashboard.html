@@ -1,0 +1,22 @@
+<h2>Welcome {{user}} 👋</h2>
+
+<marquee>🚀 DevOps Portfolio App | AWS • Kubernetes • CI/CD</marquee>
+
+<p>Version: {{version}} | Region: {{region}} | Instance: {{instance}}</p>
+
+<hr>
+
+<h3>Stats</h3>
+Projects: {{projects}} |
+Blogs: {{blogs}} |
+Deployments: {{deployments}} |
+Ideas: {{ideas}}
+
+<hr>
+
+<h3>Add Project</h3>
+<form action="/add_project" method="post">
+  Title: <input name="title"><br>
+  Desc: <input name="description"><br>
+  <button>Add</button>
+</form>
