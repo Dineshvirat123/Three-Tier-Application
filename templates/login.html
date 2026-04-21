@@ -1,7 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+
+  <!-- ✅ ADD CSS HERE -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+
 <h2>DevOps Portfolio Login</h2>
+
 <form action="/login" method="post">
-  Email: <input name="email"><br>
-  Password: <input type="password" name="password"><br>
-  <button>Login</button>
+  Email: <input name="email"><br><br>
+  Password: <input type="password" name="password"><br><br>
+  <button type="submit">Login</button>
 </form>
+
+<br>
 <a href="/signup">Signup</a>
+
+</body>
+</html>
